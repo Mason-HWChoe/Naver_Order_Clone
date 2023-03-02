@@ -172,6 +172,7 @@ textarea::-webkit-outer-spin-button {
 }
 .order-type-popup .icon {
   width: 100px;
+  height: auto;
 }
 .order-type-popup .desc {
   margin-top: 8px;
