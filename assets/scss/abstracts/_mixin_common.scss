@@ -1,0 +1,5 @@
+@mixin ellipse { //텍스트 길 때 말 줄임(...)
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
