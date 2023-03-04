@@ -462,14 +462,46 @@ textarea::-webkit-outer-spin-button {
   margin-top: 10px;
   background-color: #fff;
 }
+.menu-category-area .common-inner {
+  border-bottom: 1px solid #f2f2f2;
+  position: relative;
+}
+.menu-category-area .common-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+}
+.menu-category-area .common-inner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  background-image: linear-gradient(to left, #fff, rgba(255, 255, 255, 0));
+}
 .menu-category-area .category-list {
   display: flex;
   align-items: center;
   height: 54px;
 }
+.menu-category-area .category-item:first-child {
+  padding-left: 18px;
+}
+.menu-category-area .category-item:last-child {
+  padding-right: 18px;
+}
 .menu-category-area .category-tab {
   display: flex;
-  align-content: center;
+  align-items: center;
   padding: 0 12px;
   font-size: 16px;
   height: 30px;
@@ -482,8 +514,58 @@ textarea::-webkit-outer-spin-button {
   border-radius: 15px;
 }
 
-.sangmin {
-  width: 100%;
+.menu-list-area {
+  padding: 28px 18px 10px;
+  background-color: #fff;
+}
+.menu-list-area:not(.new):not(.popular) {
+  margin-top: 10px;
+}
+.menu-list-area.new {
+  border-bottom: 1px solid #f2f2f2;
+}
+.menu-list-area.is-closed {
+  padding: 24px 18px;
+}
+.menu-list-area.is-closed + .is-closed {
+  margin-top: 0;
+  border-top: 1px solid #f2f2f2;
+}
+.menu-list-area.is-closed .ico-arrow {
+  transform: rotate(180deg);
+}
+.menu-list-area.is-closed .menu-list {
+  display: none;
+}
+.menu-list-area .menu-category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-list-area .title-area {
+  display: flex;
+  align-items: center;
+}
+.menu-list-area .title {
+  font-size: 19px;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.3px;
+}
+.menu-list-area .period {
+  font-size: 14px;
+  letter-spacing: -0.3px;
+  color: #666;
+}
+.menu-list-area .period::before {
+  content: "";
+  display: inline-block;
+  background-color: #ededed;
+  margin: 0 10px;
+  vertical-align: middle;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
 }
 
 .container {

@@ -4,6 +4,36 @@
     margin-top: 10px;
     background-color: #fff;
 
+
+    .common-inner {
+        border-bottom: 1px solid $booking-color-border144;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: $m-padding;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            background-image: linear-gradient(to right, #fff, rgba(255,255,255,0));
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: $m-padding;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            background-image: linear-gradient(to left, #fff, rgba(255,255,255,0));
+        }
+    }
+
     .category-list {
         display: flex;
         align-items: center;
@@ -11,12 +41,17 @@
     }
 
     .category-item {
-
+        &:first-child {
+            padding-left: $m-padding;
+        }
+        &:last-child {
+            padding-right: $m-padding;
+        }
     }
 
     .category-tab {
         display: flex;
-        align-content: center;
+        align-items: center;
         padding: 0 12px;
         font-size: 16px;
         height: 30px;
@@ -30,8 +65,5 @@
         }
     }
 
-    }
+}
 
-    .sangmin {
-        width: 100%;
-    }
