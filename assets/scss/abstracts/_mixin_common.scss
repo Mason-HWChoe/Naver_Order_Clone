@@ -1,4 +1,4 @@
-@mixin ellipse { //텍스트 길 때 말 줄임(...) -한 줄일때
+@mixin ellipsis { //텍스트 길 때 말 줄임(...) -한 줄일때
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
